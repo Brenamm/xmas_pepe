@@ -166,6 +166,15 @@ footer a:hover {
     }
 }
 
+.billy-header {
+    display: flex; /* Utilise Flexbox */
+    align-items: center; /* Aligne les éléments verticalement */
+    justify-content: center; /* Centrer les éléments horizontalement */
+    gap: 10px; /* Ajoute un espacement entre les éléments */
+    font-size: 7rem; /* Taille du texte */
+    text-align: center; /* Centre le texte */
+}
+
 /* Style des icônes Billy dans le titre */
 .billy-icon {
     width: 120px;
