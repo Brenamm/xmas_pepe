@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'Mountains of Christmas', cursive;
+    font-family: "Caveat", cursive;
     margin: 0;
     padding: 0;
     background: #12283f url('bg-snowflake.png') no-repeat center center fixed;
@@ -10,11 +10,12 @@ body {
 
 h3 {
     animation: colorShift 2s infinite alternate;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 body p { 
-    font-size: 1.8rem;
+    font-size: 2.3rem;
+    font-weight: 700;
 }
 
 
@@ -26,9 +27,8 @@ header {
 }
 
 header h1 {
-    font-size: 5.5rem;
+    font-size: 7rem;
     animation: colorShift 2s infinite alternate;
-    font-family: 'Mountains of Christmas', cursive;
 }
 
 /* Animation pour le changement de couleur */
@@ -53,6 +53,7 @@ main {
 
 .about h2, .features h2, .cta h2 {
     color: #f7b42c;
+    font-size: 3rem;
 }
 
 ul {
@@ -71,7 +72,7 @@ ul li {
     color: #12283f;
     padding: 0.7rem 1.5rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 5px;
     transition: background 0.3s;
 }
@@ -99,7 +100,7 @@ footer a:hover {
 .snowflake {
     position: absolute;
     top: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     animation: fall linear infinite;
 }
 
@@ -206,3 +207,39 @@ footer a:hover {
     }
 }
 
+/* Coming Soon Section */
+.coming-soon-section {
+    text-align: center;
+    margin: 3rem 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.coming-soon-section h2 {
+    font-size: 2.5rem;
+    animation: colorShift 2s infinite alternate; /* Animation déjà définie */
+}
+
+.coming-soon-section p {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.coming-soon-section .btn {
+    display: inline-block;
+    background: #f7b42c;
+    color: #12283f;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+    margin-top: 1.5rem;
+}
+
+.coming-soon-section .btn:hover {
+    background: #6bd4fd;
+}

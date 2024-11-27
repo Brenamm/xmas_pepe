@@ -17,3 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(createSnowflake, 300);
 });
+
+// Redirection vers "Coming Soon" pour les liens désactivés
+document.querySelectorAll('a[href="#"]').forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = 'soon.html';
+    });
+});
+
