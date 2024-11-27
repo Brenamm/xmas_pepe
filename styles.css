@@ -127,13 +127,29 @@ footer a:hover {
 }
 
 .xmas-pepe {
-    width: 500px;
-    height: auto;
-    border: #fff;
-    border-width: 10px;
-    border-radius: 90%;
+    width: 100%; /* Adapte la largeur à l’espace disponible */
+    max-width: 500px; /* Limite la largeur maximale pour les grands écrans */
+    height: auto; /* Garde les proportions de l’image */
+    border: 10px solid #fff; /* Corrige le style de bordure */
+    border-radius: 50%; /* Assure une forme circulaire */
     transition: transform 0.3s ease;
 }
+
+/* Média-query pour ajuster les plus petits écrans */
+@media (max-width: 768px) {
+    .xmas-pepe {
+        max-width: 300px; /* Réduit la largeur maximale pour les tablettes et mobiles */
+        border-width: 5px; /* Diminue la bordure pour un meilleur rendu */
+    }
+}
+
+@media (max-width: 480px) {
+    .xmas-pepe {
+        max-width: 200px; /* Taille optimale pour les petits mobiles */
+        border-width: 3px; /* Ajuste encore plus la bordure */
+    }
+}
+
 
 .xmas-pepe:hover {
     transform: scale(1.1) rotate(5deg);
@@ -148,3 +164,44 @@ footer a:hover {
         transform: rotate(5deg);
     }
 }
+
+/* Style des icônes Billy dans le titre */
+.billy-icon {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    animation: swing 2s infinite ease-in-out;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Animation de balancement */
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+/* Style du texte avec Billy */
+.billy-text {
+    font-size: 1.2rem;
+    background: linear-gradient(90deg, green, red);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 3s infinite linear;
+}
+
+/* Dégradé animé sur le texte */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
