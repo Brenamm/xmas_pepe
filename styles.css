@@ -169,6 +169,7 @@ footer a:hover {
 .billy-icon {
     width: 120px;
     height: auto;
+    border: 10px solid #fff;
     border-radius: 50%;
     animation: swing 2s infinite ease-in-out;
     display: inline-block;
