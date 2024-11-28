@@ -3,9 +3,10 @@ body {
     font-family: "Caveat", cursive;
     margin: 0;
     padding: 0;
-    background: #12283f url('bg-snowflake.png') no-repeat center center fixed;
+    background: #290505 url('bg-snowflake.png') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
+    overflow-x: hidden;
 }
 
 h3 {
@@ -22,8 +23,8 @@ body p {
 header {
     text-align: center;
     padding: 2rem 1rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-bottom: 2px solid #6bd4fd;
+    background-color: rgba(5, 36, 5, 0.6);
+    border-bottom: 2px solid #ff0000;
 }
 
 header h1 {
@@ -78,7 +79,7 @@ ul li {
 }
 
 .btn:hover {
-    background: #6bd4fd;
+    background: #3fbd1d;
 }
 
 footer {
@@ -117,7 +118,7 @@ footer a:hover {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 10px rgba(190, 14, 14, 0.4);
 }
 
 .ornament {
