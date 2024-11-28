@@ -52,9 +52,12 @@ main {
     margin: 2rem 0;
 }
 
+h2 {
+    font-size: 3rem;
+}
+
 .about h2, .features h2, .cta h2 {
     color: #f7b42c;
-    font-size: 3rem;
 }
 
 ul {
