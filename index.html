@@ -1,73 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>$XBILLY</title>
+    <title>Sue&Andy</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="xbilly.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="heart.png">
+    <script src="https://unpkg.com/fireworks-js/dist/index.umd.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1 class="billy-header">
-            <img src="xbilly.png" alt="Xmas Billy" class="billy-icon"> 
-            $XBILLY 
-            <img style="margin-left: 25px;" src="xbilly.png" alt="Xmas Billy" class="billy-icon">
-        </h1>
-        
-        <h3>CA: F48YMfTYBa1Hu2d7XPLvtM2KdMpwsnECtTYh6gvDpump</h3>
-        <p>The cutest dog on Solana deserves a place by your side this Christmas—rocking his fresh festive look!</p>
-        <p>
-            <a style="font-size: 2.5rem;" id="socials" href="https://pump.fun/coin/F48YMfTYBa1Hu2d7XPLvtM2KdMpwsnECtTYh6gvDpump">Pump.fun</a>
-        </p>
-    </header>
-    
-    <main>
-        <section class="xmas-pepe-section">
-            <h2>Meet Xmas Billy!</h2>
-            <p>In the frosty glow of the holiday season, when the world is wrapped in a warm blanket of festive cheer, a legendary figure emerges—not Santa Claus, but the one and only Xmas Billy, decked out in his fresh holiday attire</p>
-            <div class="ornament">
-                <img src="xbilly.png" alt="Xmas billy" class="xmas-pepe">
-            </div>
-        </section>
-        
-        <section class="about">
-            <h2>About Xmas Billy</h2>
-            <p>Xmas Billy is the meme coin that brings joy, laughter, and a sprinkle of holiday magic to the blockchain world. Join us as we spread the cheer!</p>
-        </section>
 
-        <section class="features">
-            <h2>Features</h2>
-            <ul>
-                <li><p>🎁 Community-driven</p></li>
-                <li><p>🪙 1,000,000,000 total supply</p></li>
-                <li><p>✨ Fair launch</p></li>
-            </ul>
-        </section>
+    <div id="fireworks-container">
+        <img id="yoshi-gif" src="yoshi.gif" alt="Computer man">
+        <img id="reverseyoshi-gif" class="reverseyoshi" src="reverseyoshi.gif" alt="Computer man">
+        <img id="bear.gif" class="bear" src="bear.gif" alt="">
+        <p id="ask" class="ask">Will you be my Valentine?</p>
+        <button id="start-button">Yes</button>
+        <button id="stop-button">No</button>
+        <button id="refresh-button"><a href="\">Refresh the page!</a></button>
 
-        <section class="cta">
-            <h2>Join the Xmas Billy Movement</h2>
-            <a href="https://pump.fun/coin/F48YMfTYBa1Hu2d7XPLvtM2KdMpwsnECtTYh6gvDpump" class="btn">Buy Now</a>
-        </section>
+    </div>
 
-        <section>
-            <img style="width: 100%;" src="xmas_billy_banner_new.png" alt="xbilly banner">
-        </section>
-    </main>
+    <script>
+        const container = document.getElementById('fireworks-container');
+        const startButton = document.getElementById('start-button');
+        const refreshButton = document.getElementById('refresh-button');
+        const stopButton = document.getElementById('stop-button');
+        const reverseyoshiGif = document.getElementById('reverseyoshi-gif'); // Get the GIF element
+        const ask = document.getElementById('ask');
+        const yoshiGif = document.getElementById('yoshi-gif'); // Get the GIF element
+        const bear = document.getElementById('bear.gif'); // Get the GIF element
 
-    <footer>
-        <p> 
-            <a href="https://pump.fun/coin/F48YMfTYBa1Hu2d7XPLvtM2KdMpwsnECtTYh6gvDpump">Buy now</a>
-        </p>
-        <div style="margin-left: 100px;margin-right: 100px;background-color: rgb(90, 44, 44);padding: 10px;border-radius: 20px;">
-            <strong style="font-size: 2.5rem;">Disclaimer :</strong>
-            <p style="font-size: 2rem;">The information on this site is for entertainment and informational purposes only. Investing involves risk, including potential loss of funds. Only invest what you can afford to lose. We do not provide financial advice, and we are not responsible for any losses or damages resulting from actions taken based on the content of this website. Use at your own risk.</p>
-        </div>
-        <p>© 2024 Xmas Billy Memecoin. All rights reserved. 🐶🎄</p>
-    </footer>
-    <script src="script.js"></script>
+
+
+        // Initialize fireworks with romantic colors
+        const fireworks = new Fireworks.default(container, {
+            hue: { min: 300, max: 360 }, // Pink, purple, and red hues
+            speed: 4,
+            particles: 100,
+            explosion: 5,
+            gravity: 1.2,
+            friction: 0.95,
+            brightness: { min: 50, max: 80 }, // Soft brightness
+        });
+
+        // Add click event to the button
+        startButton.addEventListener('click', () => {
+            if (fireworks.isRunning) {
+                fireworks.stop(); // Stop if already running
+                startButton.textContent = 'Yes';
+                yoshiGif.style.display = 'block'; // Show the GIF again
+                reverseyoshiGif.style.display = 'block'; // Show the GIF again
+                ask.style.display = 'block'; // Show the GIF again
+
+            } else {
+                fireworks.start(); // Start if not running
+                startButton.style.display = 'none';
+                stopButton.style.display = 'none';
+                yoshiGif.style.display = 'none'; // Hide the GIF
+                reverseyoshiGif.style.display = 'none'; // Hide the GIF
+                ask.textContent = 'Yayyyy!!! \n Thank you for being my girlfriend baby <3 Call me!'; // Show the GIF again
+
+            }
+        });
+
+        stopButton.addEventListener('click', () => {
+            startButton.style.display = 'none';
+            stopButton.style.display = 'none';
+            yoshiGif.style.display = 'none'; // Hide the GIF
+            reverseyoshiGif.style.display = 'none'; // Hide the GIF
+            bear.style.display = "block"
+            refreshButton.style.display = "block"
+            ask.textContent = 'Are you sure about that? \n Lets try that again...'; // Show the GIF again
+            ask.style.top = "70%"
+        });
+
+        refreshButton.addEventListener('click', () => {
+            location.reload(); // Refresh the page
+        });
+    </script>
 </body>
+
 </html>

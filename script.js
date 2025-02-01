@@ -1,28 +1,16 @@
-// Simple snowflake animation
-document.addEventListener("DOMContentLoaded", () => {
-    const body = document.body;
+import Fireworks from 'fireworks-js';
 
-    function createSnowflake() {
-        const snowflake = document.createElement("div");
-        snowflake.classList.add("snowflake");
-        snowflake.textContent = "❄";
-        snowflake.style.left = `${Math.random() * 100}vw`;
-        snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
-        body.appendChild(snowflake);
+const container = document.getElementById('fireworks-container');
+const fireworks = new Fireworks(container, {
+    hue: 120,
+    speed: 4,
+    acceleration: 1.05,
+    friction: 0.98,
+    gravity: 1,
+    particles: 50,
+    explosion: 5,
+  });
 
-        setTimeout(() => {
-            snowflake.remove();
-        }, 5000);
-    }
-
-    setInterval(createSnowflake, 300);
-});
-
-// Redirection vers "Coming Soon" pour les liens désactivés
-document.querySelectorAll('a[href="#"]').forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        window.location.href = 'soon.html';
-    });
-});
+// Start the fireworks
+fireworks.start();
 
